@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 const io = new Server(httpServer, {
   cors: {
-    origin: ["http://localhost:5173", "http://localhost:4000"],
+    origin: ["http://localhost:5173", "http://localhost:4000, https://ft-endpoint.onrender.com"],
     methods: ["Get", "POST", "PUT", "DELETE"],
     allowedHeaders: ["content-type", "Authorization"],
   },
@@ -43,7 +43,7 @@ connectNamespaces();
 
 const startServer = async () => {
   try {
-     httpServer.listen(PORT, () => {
+    httpServer.listen(PORT, () => {
       console.log(`server listening on port ${PORT} http://localhost:${PORT}`);
     });
     // console.log(httpServer)
