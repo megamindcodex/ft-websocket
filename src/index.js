@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 const io = new Server(httpServer, {
   cors: {
-    origin: ["http://localhost:5173", "http://localhost:4000, https://ft-endpoint.onrender.com"],
+    origin: ["http://localhost:5173", "http://localhost:4000, https://ft-endpoint.onrender.com", "https://test-fintech.netlify.app"],
     methods: ["Get", "POST", "PUT", "DELETE"],
     allowedHeaders: ["content-type", "Authorization"],
   },
